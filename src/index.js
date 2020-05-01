@@ -2,11 +2,29 @@ const express = require('express');
 
 const app = express();
 
-app.get('/', (request, response) => {
+app.use(express.json());
+
+app.get('/', (request, response) => {  
   return response.json('Hello World with Nodemon!');
 });
 
 app.get('/projects', (request, response) => {
+  const { title, owner } = request.query;
+  
+  console.log(title);
+  console.log(owner);
+
+  return response.json([
+    'Projeto 1',
+    'Projeto 2',
+  ]);
+});
+
+app.get('/projects/:id', (request, response) => {
+  const { id } = request.params;
+  
+  console.log(id);
+
   return response.json([
     'Projeto 1',
     'Projeto 2',
@@ -14,6 +32,11 @@ app.get('/projects', (request, response) => {
 });
 
 app.post('/projects', (request, response) => {
+  const {title, owner} = request.body
+  
+  console.log(title)
+  console.log(owner)
+
   return response.json([
     'Projeto 1',
     'Projeto 2',
