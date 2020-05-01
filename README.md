@@ -13,7 +13,7 @@ A application to storage projects using [Express](https://expressjs.com/pt-br/).
 
 Apply all the main concepts of NodeJS and Express. How to use global/local middlewares, how to do a CRUD (Create, Read, Update, Delete) and learn the behavior of the requests and responses.
 
-## :checkered_flag-installation: Installation
+## :checkered_flag: Installation
 `yarn install`
 
 To start the application:
